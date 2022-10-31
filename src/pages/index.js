@@ -1,11 +1,9 @@
-import Contact from "../components/contact";
-import Navbar from "../components/navbar";
+import LoginForm from "../components/forms/loginForm";
 
-export default function Home() {
+export default function Login() {
   return (
     <div>
-      <Contact />
-      <Navbar />
+      <LoginForm />
     </div>
   );
 }
