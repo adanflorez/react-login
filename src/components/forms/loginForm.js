@@ -18,7 +18,7 @@ const LoginForm = () => {
         await services.login(user, password);
         router.push("/home");
       } catch (error) {
-        alert("Usuario y/o contraseña invalida")
+        alert("Usuario y/o contraseña invalida");
       }
     }
   };
@@ -26,7 +26,8 @@ const LoginForm = () => {
   return (
     <div className="card p-3 mx-auto mt-5" style={{ width: "28rem" }}>
       <div className="card-body">
-        <h5 className="card-title">Inicio de sesión</h5>
+        <h3 className="card-title text-center">¡BIENVENIDO!</h3>
+        <p className="text-center">Por favor ingresa tus credenciales</p>
         {error ? (
           <AlertError
             message={"Debes ingresar usuario y contraseña"}
@@ -63,13 +64,21 @@ const LoginForm = () => {
             }}
           />
         </div>
-        <div className="d-grid gap-2">
+        <div className="d-grid gap-2 text-center">
           <button
             className="btn btn-primary"
             type="button"
             onClick={handleSubmit}
           >
             Iniciar sesión
+          </button>
+          ó
+          <button
+            className="btn btn-secondary"
+            type="button"
+            onClick={handleSubmit}
+          >
+            Registrate
           </button>
         </div>
       </div>
