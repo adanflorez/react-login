@@ -1,5 +1,7 @@
 import { useRouter } from "next/router";
 import React, { useState } from "react";
+import api from "../../http/axios";
+import services from "../../http/services";
 import AlertError from "../alerts/error";
 
 const LoginForm = () => {
@@ -8,11 +10,16 @@ const LoginForm = () => {
   const [password, setPassword] = useState("");
   const [error, setError] = useState(false);
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     if ([user, password].includes("")) {
       setError(true);
     } else {
-      router.push("/home");
+      try {
+        await services.login(user, password);
+        router.push("/home");
+      } catch (error) {
+        alert("Usuario y/o contraseña invalida")
+      }
     }
   };
 
@@ -56,7 +63,7 @@ const LoginForm = () => {
             }}
           />
         </div>
-        <div class="d-grid gap-2">
+        <div className="d-grid gap-2">
           <button
             className="btn btn-primary"
             type="button"
