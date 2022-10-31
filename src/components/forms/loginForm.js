@@ -1,6 +1,5 @@
-import { useRouter } from "next/router";
 import React, { useState } from "react";
-import api from "../../http/axios";
+import { useRouter } from "next/router";
 import services from "../../http/services";
 import AlertError from "../alerts/error";
 
@@ -70,13 +69,15 @@ const LoginForm = () => {
             type="button"
             onClick={handleSubmit}
           >
-            Iniciar sesión
+            Inicia sesión
           </button>
           ó
           <button
             className="btn btn-secondary"
             type="button"
-            onClick={handleSubmit}
+            onClick={() => {
+              router.push("/signup");
+            }}
           >
             Registrate
           </button>
