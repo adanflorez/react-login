@@ -1,0 +1,16 @@
+.passport {
+    margin-top: 40px;
+
+    &__card {
+        height: 400px !important;
+        position: relative;
+        width: 100%;
+        border-radius: 8px;
+        background-position: center center;
+    }
+
+    &__bg {
+        border-radius: 8px;
+        opacity: 0.6;
+    }
+}

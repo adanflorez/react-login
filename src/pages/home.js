@@ -1,14 +1,11 @@
 import React from "react";
-
-import Contact from "../components/contact";
-import Navbar from "../components/navbar";
+import Header from "../components/header";
 
 const Home = () => {
   return (
-    <div>
-      <Contact />
-      <Navbar />
-    </div>
+    <>
+      <Header />
+    </>
   );
 };
 

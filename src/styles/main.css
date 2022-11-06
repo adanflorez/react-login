@@ -1,4 +1,19 @@
 @charset "UTF-8";
+.passport {
+  margin-top: 40px;
+}
+.passport__card {
+  height: 400px !important;
+  position: relative;
+  width: 100%;
+  border-radius: 8px;
+  background-position: center center;
+}
+.passport__bg {
+  border-radius: 8px;
+  opacity: 0.6;
+}
+
 /*!
  * Bootstrap  v5.2.2 (https://getbootstrap.com/)
  * Copyright 2011-2022 The Bootstrap Authors
