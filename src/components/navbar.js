@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -30,9 +32,14 @@ const Navbar = () => {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <Link className="nav-link" href="/passports">
+                  Pasaportes
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" href="/home">
                   Inicio
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
